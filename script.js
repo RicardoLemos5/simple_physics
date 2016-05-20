@@ -1,7 +1,6 @@
 var canvas, ctx, launch;
 var fps = 60;
 var counter = 1;
-var balls = [];
 window.onload = function(){
     canvas = document.getElementById("canvas");
     ctx = canvas.getContext("2d");
@@ -19,6 +18,7 @@ window.onload = function(){
 var width = 800;
 var height = 600;
 
+var balls = [];
 function Ball(){
     this.color = this.randomColor();
     this.size;
