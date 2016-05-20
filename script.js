@@ -19,6 +19,9 @@ var width = 800;
 var height = 600;
 
 var balls = [];
+var gravity = 1;
+var resistance = 1;
+var bounceFactor = 0.9;
 function Ball(){
     this.color = this.randomColor();
     this.size;
@@ -26,9 +29,6 @@ function Ball(){
     this.y;
     this.vx;
     this.vy;
-    this.gravity = 1;
-    this.resistance = 1;
-    this.bounceFactor = 0.9;
 }
 
 Ball.prototype.update = function() {
@@ -38,9 +38,9 @@ Ball.prototype.update = function() {
     ctx.fill();
     ctx.closePath();
     
-    this.vx *= (2000 - this.resistance * 10) / 2000;
+    this.vx *= (2000 - resistance * 10) / 2000;
     this.x += this.vx;
-    this.vy += this.gravity;
+    this.vy += gravity;
     this.y += this.vy;
     
     if(this.x >= width - this.size){
@@ -55,8 +55,8 @@ Ball.prototype.update = function() {
     
     if(this.y >= height - this.size){
         this.y = height - this.size;
-        this.vy *= -this.bounceFactor;
-        if(this.bounceFactor === 1) this.y += this.vy;
+        this.vy *= -bounceFactor;
+        if(bounceFactor === 1) this.y += this.vy;
     }
 };
 
