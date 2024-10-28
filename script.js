@@ -1,5 +1,5 @@
 var canvas, ctx, launch;
-var fps = 144;
+var fps = 60;
 var counter = 1;
 window.onload = function(){
     canvas = document.getElementById("canvas");
