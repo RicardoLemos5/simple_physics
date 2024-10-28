@@ -1,4 +1,4 @@
 # bouncing_ball
 
 Website link:
-http://RicardoLemos5.github.io/simple_physics/
+http://ricardolemos5.github.io/simple_physics/
