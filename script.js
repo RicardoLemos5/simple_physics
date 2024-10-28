@@ -19,7 +19,7 @@ var width = 800;
 var height = 600;
 
 var balls = [];
-var gravity = 0.01;
+var gravity = 0.5;
 var resistance = 1;
 var bounceFactor = 0.9;
 function Ball(){
