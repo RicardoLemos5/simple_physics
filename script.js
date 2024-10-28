@@ -1,5 +1,5 @@
 var canvas, ctx, launch;
-var fps = 60;
+var fps = 144;
 var counter = 1;
 window.onload = function(){
     canvas = document.getElementById("canvas");
@@ -19,7 +19,7 @@ var width = 800;
 var height = 600;
 
 var balls = [];
-var gravity = 0.5;
+var gravity = 0.25;
 var resistance = 1;
 var bounceFactor = 0.9;
 function Ball(){
@@ -84,8 +84,8 @@ Ball.prototype.random = function(){
     
     randX = Math.random();
     randY = Math.random();
-    this.vx = Math.floor((Math.random() * 30) + 1);
-    this.vy = Math.floor((Math.random() * 30) + 1);
+    this.vx = Math.floor((Math.random() * 15) + 1);
+    this.vy = Math.floor((Math.random() * 15) + 1);
     if(randX < 0.5) this.vx = -this.vx;
     if(randY < 0.5) this.vy = -this.vy;
 };
