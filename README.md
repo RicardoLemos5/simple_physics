@@ -1,4 +1,4 @@
 # bouncing_ball
 
 Website link:
-http://agilityforce.github.io/simple_physics/
+http://RicardoLemos5.github.io/simple_physics/
